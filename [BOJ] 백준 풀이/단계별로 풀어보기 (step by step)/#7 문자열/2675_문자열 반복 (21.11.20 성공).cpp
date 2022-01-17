@@ -21,7 +21,7 @@ void solution(int R, string str)
 int main()
 {
     int T; // 테스트 케이스
-    int R;
+    int R; // 반복 횟수
     string str;
 
     cin >> T;
