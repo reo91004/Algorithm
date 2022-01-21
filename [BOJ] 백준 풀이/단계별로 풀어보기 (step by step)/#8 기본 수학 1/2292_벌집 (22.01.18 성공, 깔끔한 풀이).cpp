@@ -2,13 +2,11 @@
 
 using namespace std;
 
-void solution(int N)
-{
+void solution(int N) {
     int cnt = 1;
     int layer = 1;
 
-    while (N > cnt) 
-    {
+    while (N > cnt) {
         cnt += 6 * layer;
         layer++;
     }
@@ -16,8 +14,7 @@ void solution(int N)
     cout << layer;
 }
 
-int main()
-{
+int main() {
     int N;
 
     cin >> N;
