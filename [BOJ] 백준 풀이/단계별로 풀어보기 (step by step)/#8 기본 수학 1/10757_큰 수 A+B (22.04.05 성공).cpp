@@ -14,7 +14,7 @@ int main() {
     bool carry = false;
     int i, tmp;
 
-    for (i = 0; i < len; i++) {
+    for (i = 0; i < len; ++i) {
         tmp = carry;
         carry = false;
 
