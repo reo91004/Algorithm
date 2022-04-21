@@ -66,9 +66,9 @@ bool solution(string text) {
                     return false;
                 else {
                     char pre = pop(&s);
-                    if ((pre == '(' && pre != ')') ||
-                        (pre == '[' && pre != ']') ||
-                        (pre == '{' && pre != '}'))
+                    if ((pre == '(' && text[i] != ')') ||
+                        (pre == '[' && text[i] != ']') ||
+                        (pre == '{' && text[i] != '}'))
                         return false;
                 }
                 break;
