@@ -8,7 +8,7 @@ void init() {
     std::cout.tie(nullptr);
 }
 
-bool mybinary_search(std::vector<int> v, int N, int key) {
+bool mybinary_search(std::vector<int> &v, int N, int key) {
     int start = 0;
     int end = N - 1;
 
