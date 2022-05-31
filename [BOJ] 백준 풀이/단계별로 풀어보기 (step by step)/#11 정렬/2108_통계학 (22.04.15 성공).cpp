@@ -24,6 +24,7 @@ int main(void) {
 
     sort(v.begin(), v.end());
 
+    // 최빈값 중 가장 작은 값
     for (int i = 0; i <= 8000; ++i) {
         if (cnt[i] > cntmax) {
             cntmax = cnt[i];
@@ -31,6 +32,8 @@ int main(void) {
         }
     }
 
+    // 두 번째로 작은 최빈값을 구해야 한다.
+    // 이미 위에서 가장 작은 최빈값을 찾아놨으므로 val + 1부터 탐색한다.
     for (int i = val + 1; i <= 8000; ++i) {
         if (cnt[i] == cntmax) {
             val = i;
