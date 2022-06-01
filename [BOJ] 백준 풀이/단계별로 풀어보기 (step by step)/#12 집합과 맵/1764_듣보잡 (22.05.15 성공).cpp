@@ -27,9 +27,10 @@ int main() {
     }
 
     sort(v.begin(), v.end());
-    std::cout << v.size() << '\n';
+    std::cout << v.size() << "\n";
 
-    for (auto o : v) std::cout << o << '\n';
+    for (auto it : v) 
+        std::cout << it << "\n";
 
     return 0;
 }
