@@ -1,24 +1,24 @@
 import sys
 input = sys.stdin.readline
 
-def isPossible(val):
-    for i in range(val):
-        if res[i] == res[val] or abs(res[i] - res[val]) == val - i:
+def isPossible(row):
+    for i in range(row):
+        if res[i] == res[row] or abs(res[i] - res[row]) == row - i:
             return False
 
     return True
 
-def dfs(val):
+def dfs(row):
     global cnt
 
-    if val == N:
+    if row == N:
         cnt += 1
         return
     else:
         for i in range(N):
-            res[val] = i
-            if isPossible(val):
-                dfs(val + 1)
+            res[row] = i
+            if isPossible(row):
+                dfs(row + 1)
 
 # 시작
 N = int(input())

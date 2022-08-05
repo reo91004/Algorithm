@@ -4,22 +4,23 @@
 
 int N, cnt = 0;
 
-bool isPossible(std::vector<int> &v, int val) {
-    for (int i = 0; i < val; ++i) {
+bool isPossible(std::vector<int> &v, int row) {
+    for (int i = 0; i < row; ++i) {
         // 일차원 배열에서 같은 위치에 있으면 안됨, 대각선상에 있으면 안됨
-        if (v[i] == v[val] || abs(v[i] - v[val]) == val - i) return false;
+        if (v[i] == v[row] || abs(v[i] - v[row]) == row - i) return false;
     }
-
+//col[i]가 의미하는 것이 X좌표, i가 의미하는것이 Y좌표이므로 차이가 일정하다면 대각선에 있다고 볼 수 있다.
     return true;
 }
 
-void dfs(std::vector<int> &v, int N, int val) {
-    if (val == N)
+void dfs(std::vector<int> &v, int N, int row) {
+    if (row == N)
         cnt++;
     else {
         for (int i = 0; i < N; ++i) {
-            v[val] = i;
-            if (isPossible(v, val)) dfs(v, N, val + 1);
+            v[row] = i; // 현재 행 위치에 열 값을 할당한다.
+            // 해당 행, 열에 존재할 수 있다면 다음 행을 검사한다.
+            if (isPossible(v, row)) dfs(v, N, row + 1);
         }
     }
 }
