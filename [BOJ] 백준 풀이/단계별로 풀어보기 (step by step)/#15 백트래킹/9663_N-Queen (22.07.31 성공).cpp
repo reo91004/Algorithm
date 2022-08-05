@@ -9,7 +9,6 @@ bool isPossible(std::vector<int> &v, int row) {
         // 일차원 배열에서 같은 위치에 있으면 안됨, 대각선상에 있으면 안됨
         if (v[i] == v[row] || abs(v[i] - v[row]) == row - i) return false;
     }
-//col[i]가 의미하는 것이 X좌표, i가 의미하는것이 Y좌표이므로 차이가 일정하다면 대각선에 있다고 볼 수 있다.
     return true;
 }
 
