@@ -1,9 +1,10 @@
 #include <algorithm>
 #include <iostream>
 #include <vector>
+#include <limits.h>
 
 int N;
-int arr[11];
+int arr[12];
 int operators[4];  // 덧셈, 뺄셈, 곱셈, 나눗셈
 int res_min = INT_MAX;
 int res_max = INT_MIN;

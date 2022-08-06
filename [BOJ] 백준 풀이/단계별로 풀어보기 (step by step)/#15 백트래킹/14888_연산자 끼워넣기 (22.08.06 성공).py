@@ -25,7 +25,7 @@ def dfs(cur, res):
         elif i == 2:
             dfs(cur + 1, res * arr[cur])
         elif i == 3:
-            dfs(cur + 1, res / arr[cur])
+            dfs(cur + 1, int(res / arr[cur]))
         
         operators[i] += 1
 
