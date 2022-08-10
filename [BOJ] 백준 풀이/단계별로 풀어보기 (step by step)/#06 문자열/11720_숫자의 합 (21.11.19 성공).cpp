@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-    int N, res = 0; // 숫자의 갯수, 결괏값
+    int N, res = 0; // 숫자의 개수, 결괏값
     char num;
 
     cin >> N;

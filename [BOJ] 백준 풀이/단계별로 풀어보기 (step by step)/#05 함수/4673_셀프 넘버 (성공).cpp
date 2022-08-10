@@ -1,6 +1,6 @@
 #include <iostream>
 
-int self_num(int num)
+int non_self_num(int num)
 {
     int sum = num;
     while (num != 0)
@@ -19,7 +19,7 @@ int main()
 
     for (int i = 1; i <= 10000; i++)
     {
-        temp = self_num(i);
+        temp = non_self_num(i);
         if (temp <= 10000)
             number[temp] = true;
     }
