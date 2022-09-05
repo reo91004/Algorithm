@@ -1,10 +1,15 @@
 #include <iostream>
-#include <cmath>
 
-int main() 
-{
+void init() {
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+    std::cout.tie(nullptr);
+}
+
+int main()  {
+    init();
+    
     int score;
-
     std::cin >> score;
 
     if (100 >= score && score >= 90)
