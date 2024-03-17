@@ -1,0 +1,11 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     "/Users/reo/Library/Mobile Documents/com~apple~CloudDocs/Coding Practice/P Algorithm/백준 풀이/단계별로 풀어보기 (step by step)/18870_좌표_압축_24.03.17.o"
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: __Z7initSetP3Seti, symObjAddr: 0x0, symBinAddr: 0x100003C2C, symSize: 0x48 }
+  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: __Z7initSetP3Seti, symObjAddr: 0x0, symBinAddr: 0x100003C2C, symSize: 0x48 }
+  - { offsetInCU: 0x83, offset: 0x83, size: 0x8, addend: 0x0, symName: __Z8isMemberP3Seti, symObjAddr: 0x48, symBinAddr: 0x100003C74, symSize: 0x88 }
+  - { offsetInCU: 0xD9, offset: 0xD9, size: 0x8, addend: 0x0, symName: __Z6addSetP3Seti, symObjAddr: 0xD0, symBinAddr: 0x100003CFC, symSize: 0x84 }
+  - { offsetInCU: 0x10F, offset: 0x10F, size: 0x8, addend: 0x0, symName: __Z7comparePKvS0_, symObjAddr: 0x154, symBinAddr: 0x100003D80, symSize: 0x28 }
+  - { offsetInCU: 0x149, offset: 0x149, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x17C, symBinAddr: 0x100003DA8, symSize: 0x1A8 }
+...
