@@ -2,10 +2,8 @@
 triple:          'arm64-apple-darwin'
 binary-path:     '/Users/reo/Library/Mobile Documents/com~apple~CloudDocs/Coding Practice/P Algorithm/C/main.o'
 relocations:
-  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: __Z7initSetP3Seti, symObjAddr: 0x0, symBinAddr: 0x100003B04, symSize: 0x74 }
-  - { offsetInCU: 0x4D, offset: 0x4D, size: 0x8, addend: 0x0, symName: __Z7initSetP3Seti, symObjAddr: 0x0, symBinAddr: 0x100003B04, symSize: 0x74 }
-  - { offsetInCU: 0x83, offset: 0x83, size: 0x8, addend: 0x0, symName: __Z8isMemberP3Seti, symObjAddr: 0x74, symBinAddr: 0x100003B78, symSize: 0x88 }
-  - { offsetInCU: 0xD9, offset: 0xD9, size: 0x8, addend: 0x0, symName: __Z6addSetP3Seti, symObjAddr: 0xFC, symBinAddr: 0x100003C00, symSize: 0x84 }
-  - { offsetInCU: 0x10F, offset: 0x10F, size: 0x8, addend: 0x0, symName: __Z7comparePKvS0_, symObjAddr: 0x180, symBinAddr: 0x100003C84, symSize: 0x28 }
-  - { offsetInCU: 0x149, offset: 0x149, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x1A8, symBinAddr: 0x100003CAC, symSize: 0x254 }
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: __Z4initv, symObjAddr: 0x0, symBinAddr: 0x100003E8C, symSize: 0x60 }
+  - { offsetInCU: 0x6BAD, offset: 0x6BAD, size: 0x8, addend: 0x0, symName: __Z4initv, symObjAddr: 0x0, symBinAddr: 0x100003E8C, symSize: 0x60 }
+  - { offsetInCU: 0x6C6E, offset: 0x6C6E, size: 0x8, addend: 0x0, symName: __ZNSt3__19basic_iosIcNS_11char_traitsIcEEE3tieB8ue170006EPNS_13basic_ostreamIcS2_EE, symObjAddr: 0x60, symBinAddr: 0x100003EEC, symSize: 0x2C }
+  - { offsetInCU: 0x6CB2, offset: 0x6CB2, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x8C, symBinAddr: 0x100003F18, symSize: 0x64 }
 ...

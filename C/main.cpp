@@ -1,34 +1,30 @@
-#include <algorithm>
-#include <iostream>
-#include <vector>
+#include <avr/io.h>
 
-using namespace std;
+void main() {
+    PORTB |= 0b11110000;
+    DDRB |= 0b11110000;
+    DDRD &= 0b11000011;
 
-void init() {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-    cout.tie(NULL);
-}
-
-int main() {
-    int N;
-    cin >> N;
-
-    vector<int> v(N);
-
-    for (int i = 0; i < N; i++) {
-        cin >> v[i];
+    while (1) {
+        if (PIND & 0x04) {
+            PORTB |= 0x10;
+        } else {
+            PORTB &= ~0x10;
+        }
+        if (PIND & 0x08) {
+            PORTB |= 0x20;
+        } else {
+            PORTB &= ~0x20;
+        }
+        if (PIND & 0x10) {
+            PORTB |= 0x40;
+        } else {
+            PORTB &= ~0x40;
+        }
+        if (PIND & 0x20) {
+            PORTB |= 0x80;
+        } else {
+            PORTB &= ~0x80;
+        }
     }
-
-    vector<int> temp_v(v);
-    sort(temp_v.begin(), temp_v.end());
-
-    temp_v.erase(unique(temp_v.begin(), temp_v.end()), temp_v.end());
-
-    for (int i = 0; i < N; i++) {
-        auto it = lower_bound(temp_v.begin(), temp_v.end(), v[i]);
-        cout << it - temp_v.begin() << ' ';
-    }
-
-    return 0;
 }
