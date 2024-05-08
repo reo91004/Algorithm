@@ -1,3 +1,6 @@
+from typing import Optional
+
+
 class ListNode:
     def __init__(self, val=0, next=None):
         self.val = val
@@ -37,3 +40,7 @@ class Solution:
 
         # 다시 뒤집기
         return self.reverseList(head)
+
+
+s = Solution()
+print(s.doubleIt([1, 8, 9]))
