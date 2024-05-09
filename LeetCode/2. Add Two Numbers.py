@@ -8,33 +8,28 @@ class ListNode:
 
 
 class Solution:
-    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
-        cur = head
-        prev = None
-        while cur:
-            next = cur.next
-            cur.next = prev
-            prev = cur
-            cur = next
-        return prev
-
     def addTwoNumbers(
         self, l1: Optional[ListNode], l2: Optional[ListNode]
     ) -> Optional[ListNode]:
-        l1 = self.reverseList(l1)
-        l2 = self.reverseList(l2)
-        res = ListNode()
+        res = ListNode(0)  # dummy node로 시작
+        cur = res
 
         carry = 0
 
-        while l1:
-            sum = l1.val + l2.val + carry
+        while (
+            l1 or l2 or carry
+        ):  # l1, l2 둘 중 하나라도 남아 있거나, carry가 있는 경우 계속 실행
+            sum = carry
+            if l1:
+                sum += l1.val
+                l1 = l1.next
+            if l2:
+                sum += l2.val
+                l2 = l2.next
 
-            if sum >= 10:
-                carry = sum // 10
-            res.next = ListNode(sum)
-            l1 = l1.next
-            l2 = l2.next
+            carry = sum // 10
+            cur.next = ListNode(sum % 10)  # 새 노드 생성 후 결과 연결
+            cur = cur.next
 
         return res.next
 
