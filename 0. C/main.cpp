@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <vector>
 
 using namespace std;
@@ -27,5 +28,9 @@ int main() {
     std::vector<int> nums = {1, 2, 3, 4};
     solution.productExceptSelf(nums);
     // std::cout << "Result: " << solution.productExceptSelf(nums) << std::endl;
+    string str;
+    str = "12";
+    str += 1;
+    cout << str << "\n";
     return 0;
 }
