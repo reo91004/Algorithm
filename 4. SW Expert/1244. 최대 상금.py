@@ -40,4 +40,4 @@ for t in range(1, T + 1):
 
     solution(numbers, int(cnt), res)
 
-    print("#{} {}".format(t, max(res[0])))
+    print(f"#{t} {max(res[0])}")
