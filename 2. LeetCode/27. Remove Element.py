@@ -1,9 +1,11 @@
+from typing import List
+
+
 class Solution:
     def removeElement(self, nums: List[int], val: int) -> int:
+        k = 0  # 유지할 요소의 인덱스
         for i in range(len(nums)):
-            if nums[0] != val:
-                nums.append(nums[0])
-                del nums[0]
-            else:
-                del nums[0]
-        return len(nums)
+            if nums[i] != val:
+                nums[k] = nums[i]
+                k += 1
+        return k
