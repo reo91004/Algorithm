@@ -1,15 +1,7 @@
-import sys
+A = [1, 3, 5, 2, 4]
+B = [5, 3, 1, 4, 2]
 
-input = sys.stdin.readline
+sorted_pairs = sorted(zip(A, B), key=lambda x: x[1], reverse=True)
+A = [pair[0] for pair in sorted_pairs]
 
-if __name__ == "__main__":
-    N, M = map(int, input().split())
-    res = [0] * N
-
-    for _ in range(M):
-        i, j, k = map(int, input().split())
-
-        for x in range(i - 1, j):
-            res[x] = k
-
-    print(*res)
+print(A)  # 출력: [1, 2, 3, 4, 5]
