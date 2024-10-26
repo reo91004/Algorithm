@@ -1,7 +1,12 @@
-A = [1, 3, 5, 2, 4]
-B = [5, 3, 1, 4, 2]
-
-sorted_pairs = sorted(zip(A, B), key=lambda x: x[1], reverse=True)
-A = [pair[0] for pair in sorted_pairs]
-
-print(A)  # 출력: [1, 2, 3, 4, 5]
+n, *rest = map(int, open(0).read().split())
+s = rest[:n]
+dp = [[0] * (n + 1) for _ in range(n + 1)]
+S = 0
+for i in range(n - 1, -1, -1):
+    for j in range(n - 1, -1, -1):
+        if s[i] <= s[j]:
+            dp[i][j] = 1 + dp[i + 1][j + 1]
+        else:
+            dp[i][j] = 0
+        S += dp[i][j]
+print(S)
